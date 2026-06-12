@@ -85,6 +85,7 @@ chrome/                     ← copy this entire folder into your profile
 
 3. Copy the `chrome/` folder from this repo into your Thunderbird profile directory:
    - Find your profile folder: **Help → Troubleshooting Information → Profile Folder → Open Folder**
+   - On Flathub (Flatpak) installs, the profile is under: `/home/$USER/.var/app/org.mozilla.thunderbird/.thunderbird/<YOUR_PROFILE>/`
    - Copy the entire `chrome/` folder into that directory (create it if it doesn't exist)
    - The result should be: `<profile>/chrome/userChrome.css`, `<profile>/chrome/userContent.css`, etc.
 
