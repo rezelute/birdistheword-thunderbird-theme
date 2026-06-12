@@ -1,4 +1,4 @@
-# Thunderbird Chrome Theme
+# Thunderbird Chrome Theme 🐥🗣️
 
 A custom `userChrome.css` theme for Mozilla Thunderbird by **Rez**.
 
