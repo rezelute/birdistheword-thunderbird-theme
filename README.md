@@ -116,6 +116,12 @@ listed in the comment block at the top of that file.
 
 ---
 
+## Disclaimer
+
+Use at your own discretion. This theme is provided as-is — I am not responsible for any breakage, visual glitches, or issues caused by Thunderbird updates or platform differences.
+
+---
+
 ## License
 
 MIT - see [LICENSE](LICENSE). Use it however you like.
