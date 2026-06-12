@@ -1,0 +1,117 @@
+.message-header-view-button .toolbarbutton-text {
+  padding-inline-start: 6px !important;
+  padding: 8px !important;
+}
+
+.recipient-avatar {
+  height: 45px !important;
+  width: 45px !important;
+  font-size: 1.3rem !important;
+  color: #fff !important;
+  background-color: #69797e !important;
+}
+
+.recipients-list {
+  margin-top: 5px !important;
+}
+
+.recipient-multi-line-name {
+  font-size: 1.4rem !important;
+}
+
+#otherActionsButton {
+  position: relative !important;
+  padding-left: 20px !important;
+}
+
+#otherActionsButton::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  width: 16px;
+  height: 16px;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  mask-image: url("../Icons/more.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: contain !important;
+  background-color: #5aa4ef !important;
+  pointer-events: none;
+}
+
+#messageHeader:not(.message-header-buttons-only-icons)
+  .toolbarbutton-1.message-header-view-button:not(
+    [is="toolbarbutton-menu-button"]
+  ) {
+  border-color: #ececee !important;
+}
+
+#hdrReplyAllButton .toolbarbutton-menubutton-button,
+#hdrReplyAllButton .toolbarbutton-menubutton-dropmarker,
+#hdrReplyListButton .toolbarbutton-menubutton-button,
+#hdrReplyListButton .toolbarbutton-menubutton-dropmarker,
+#hdrReplyListButton {
+  border-color: #ececee !important;
+}
+
+#hdrReplyListButton .toolbarbutton-menubutton-button,
+#hdrReplyListButton .toolbarbutton-menubutton-dropmarker {
+  border: 1px solid #ececee !important;
+  box-sizing: border-box !important;
+}
+
+.recipient-address-book-button {
+  width: 12px !important;
+  height: 12px !important;
+  mask-image: url("../Icons/person.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 12px 12px !important;
+  mask-position: center !important;
+  background-color: #5aa4ef !important;
+}
+
+.recipient-address-book-button img {
+  display: none !important;
+}
+
+#toHeading,
+#ccHeading,
+#reply-toHeading {
+  margin-top: 5px !important;
+  font-weight: bolder !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  #messageHeader {
+    background-color: #141e2b !important;
+    border-bottom: 1px solid #1e2e42 !important;
+  }
+
+  #messageHeader .message-header-row,
+  #messageHeader .recipients-container,
+  #expandedHeaderView,
+  #collapsedHeaderView {
+    background-color: #141e2b !important;
+  }
+
+  #messageHeader:not(.message-header-buttons-only-icons)
+    .toolbarbutton-1.message-header-view-button:not(
+      [is="toolbarbutton-menu-button"]
+    ) {
+    border-color: #1e2e42 !important;
+  }
+
+  #hdrReplyAllButton .toolbarbutton-menubutton-button,
+  #hdrReplyAllButton .toolbarbutton-menubutton-dropmarker,
+  #hdrReplyListButton .toolbarbutton-menubutton-button,
+  #hdrReplyListButton .toolbarbutton-menubutton-dropmarker {
+    border-color: #1e2e42 !important;
+  }
+
+  #hdrReplyListButton .toolbarbutton-menubutton-button,
+  #hdrReplyListButton .toolbarbutton-menubutton-dropmarker {
+    border: 1px solid #1e2e42 !important;
+    box-sizing: border-box !important;
+  }
+}

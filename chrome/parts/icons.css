@@ -1,0 +1,446 @@
+/* ══════════════════════════════════════════════════════════════
+   ICON COLOUR PALETTE  -  edit hex values here to retheme icons
+   (Sidebar SVG colours must also be regenerated - see variables.css)
+   ══════════════════════════════════════════════════════════════
+   Sidebar nav:   mail #5aa4ef · contacts #9060d0 · calendar #3aaa90
+                  tasks #e09000 · chat #40b4cc · settings #9090c0
+   Folder tree:   inbox #5aa4ef · drafts #9a97b8 · sent #3aaa90
+                  junk #df4646 · trash #8785a3 · archive #8785a3
+                  outbox #5aacb4 · folder light #1c66c8 / dark #4b9de0
+   Header icons:  reply #b566bf · forward #1e8bcd · action #8785a3
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Spaces sidebar icons ─────────────────────────────────── */
+
+#mailButton {
+  background-image: url("../Icons/mail-col.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: 20px 20px !important;
+  background-position: center !important;
+  width: 30px !important;
+}
+#mailButton img {
+  display: none !important;
+}
+
+#addressBookButton {
+  background-image: url("../Icons/book-col.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: 20px 20px !important;
+  background-position: center !important;
+  width: 30px !important;
+}
+#addressBookButton img {
+  display: none !important;
+}
+
+#calendarButton {
+  background-image: url("../Icons/calendar-col.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: 20px 20px !important;
+  background-position: center !important;
+  width: 30px !important;
+}
+#calendarButton img {
+  display: none !important;
+}
+
+#tasksButton {
+  background-image: url("../Icons/tasks-col.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: 20px 20px !important;
+  background-position: center !important;
+  width: 30px !important;
+}
+#tasksButton img {
+  display: none !important;
+}
+
+#chatButton {
+  background-image: url("../Icons/chat-col.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: 20px 20px !important;
+  background-position: center !important;
+  width: 30px !important;
+}
+#chatButton img {
+  display: none !important;
+}
+
+#settingsButton {
+  background-image: url("../Icons/settings-col.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: 20px 20px !important;
+  background-position: center !important;
+  width: 30px !important;
+}
+#settingsButton img {
+  display: none !important;
+}
+
+/* ── Folder pane header ───────────────────────────────────── */
+
+#folderPaneGetMessages {
+  background-image: url("../Icons/sync-col.svg") !important;
+  background-repeat: no-repeat !important;
+  background-size: 20px 20px !important;
+  background-position: center !important;
+  width: 30px !important;
+}
+#folderPaneGetMessages img {
+  display: none !important;
+}
+
+/* ── Folder tree icons ────────────────────────────────────── */
+
+#folderTree li[data-folder-type="inbox"] > .container > .icon {
+  mask-image: url("../Icons/inbox.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #5aa4ef !important;
+}
+
+#folderTree li[data-folder-type="drafts"] > .container > .icon {
+  mask-image: url("../Icons/drafts.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #9a97b8 !important;
+}
+
+#folderTree li[data-folder-type="sent"] > .container > .icon {
+  mask-image: url("../Icons/sent.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #3aaa90 !important;
+}
+
+#folderTree li[data-folder-type="junk"] > .container > .icon {
+  mask-image: url("../Icons/junk.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #df4646 !important;
+}
+
+#folderTree li[data-folder-type="trash"] > .container > .icon {
+  mask-image: url("../Icons/trash.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #8785a3 !important;
+}
+
+#folderTree li[data-folder-type="archive"] > .container > .icon {
+  mask-image: url("../Icons/archive.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #8785a3 !important;
+}
+
+#folderTree li[data-folder-type="outbox"] > .container > .icon {
+  mask-image: url("../Icons/outbox.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #5aacb4 !important;
+}
+
+/* Generic folder - suppress the img src so our color shows through */
+#folderTree li:not([data-folder-type]) > .container > .icon {
+  content: "" !important;
+  background-image: none !important;
+  mask-image: url("../Icons/folder.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #3daee9 !important; /* KDE plasma blue */
+}
+
+/* ── Message header toolbar icons ────────────────────────── */
+
+#hdrReplyButton .toolbarbutton-icon,
+#hdrReplyToSenderButton .toolbarbutton-icon {
+  list-style-image: none !important;
+  mask-image: url("../Icons/reply.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #b566bf !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+#hdrReplyAllButton .toolbarbutton-icon {
+  list-style-image: none !important;
+  mask-image: url("../Icons/reply-all.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #b566bf !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+#hdrReplyListButton .toolbarbutton-icon {
+  list-style-image: none !important;
+  mask-image: url("../Icons/list-reply.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #1e8bcd !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+#hdrForwardButton .toolbarbutton-icon {
+  list-style-image: none !important;
+  mask-image: url("../Icons/forward.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #1e8bcd !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+#hdrArchiveButton .toolbarbutton-icon {
+  list-style-image: none !important;
+  mask-image: url("../Icons/archive.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #8785a3 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+#hdrJunkButton .toolbarbutton-icon {
+  list-style-image: none !important;
+  mask-image: url("../Icons/junk.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #df4646 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+#hdrTrashButton .toolbarbutton-icon {
+  list-style-image: none !important;
+  mask-image: url("../Icons/trash.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #8785a3 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+#otherActionsButton .toolbarbutton-icon {
+  display: none;
+}
+
+/* ── Tab icons ────────────────────────────────────────────── */
+
+.tab-icon-image {
+  stroke: #fff0 !important;
+}
+
+.tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/inbox.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/inbox.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/folder.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/folder.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/draft.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/drafts.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/sent.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/sent.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/spam.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/junk.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/trash.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/trash.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/address-book.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/contact.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/tasks.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/tasks.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/calendar.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/calendar.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/chat.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/chat.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/settings.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/settings-tab.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/mail-secure.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/mail.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/account-settings.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/person-tab.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.tab-icon-image[src*="chrome://mozapps/skin/extensions/extension.svg"] {
+  content: none !important;
+  mask-image: url("../Icons/extention.svg") !important;
+  mask-repeat: no-repeat !important;
+  mask-size: 16px 16px !important;
+  mask-position: center !important;
+  background-color: #525b65 !important;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tab-icon-image[src*="chrome://messenger/skin/icons/new/compact/"],
+  .tab-icon-image[src*="chrome://mozapps/skin/extensions/extension.svg"] {
+    background-color: #8fa8c0 !important;
+  }
+}
+
+/* ── Thread pane / address book utility ──────────────────── */
+
+#placeholderNoMessages::before {
+  background-image: url("../Icons/mail-col.svg") !important;
+}
+
+#threadPaneQuickFilterButton {
+  background-image: url("../Icons/filter.svg") !important;
+}
+
+#threadPaneDisplayButton,
+#displayButton {
+  background-image: url("../Icons/list.svg") !important;
+}
+
+#booksPaneCreateList {
+  background-image: url("../Icons/book-col.svg") !important;
+}
+
+.bookRow-icon {
+  background-image: url("../Icons/notepad-person.svg") !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  #threadPaneQuickFilterButton {
+    background-image: url("../Icons/filter-dark.svg") !important;
+  }
+
+  #threadPaneDisplayButton,
+  #displayButton {
+    background-image: url("../Icons/list-dark.svg") !important;
+  }
+}

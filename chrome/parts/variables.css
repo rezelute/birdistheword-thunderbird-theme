@@ -1,0 +1,181 @@
+/* ═══════════════════════════════════════════════════════════════
+   COLOR TOKENS  -  edit here to retheme light or dark mode
+
+   NOTE: Sidebar nav icon colours are baked into SVG files because
+   Firefox does not resolve CSS variables inside background-image SVGs.
+   Icon palette + SVG filenames are listed at the top of icons.css.
+   Folder tree / header / tab icon colours are hardcoded in icons.css.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Light mode ─────────────────────────────────────────────── */
+@media (prefers-color-scheme: light) {
+  *|*:root {
+    /* Pane backgrounds (left → right, progressively lighter) */
+    --spaces-bg: #e2ecf8;
+    --spaces-border: #c8d8ec;
+    --spaces-hover: #d0e2f4;
+    --spaces-active: #c0d8f0;
+    --folder-bg: #eaf2fb;
+    --thread-bg: #f0f5fc;
+    --body-bg: #ffffff;
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-border: #c8d8ec;
+    --card-hover-bg: #eaf2fb;
+    --card-hover-border: #a8c8ea;
+    --card-selected-bg: #dbeeff;
+    --card-selected-border: #5aa4ef;
+    --card-unfocus-bg: #cce4f7;
+    --card-unfocus-border: #7ab8e8;
+
+    /* Left accent bar on cards */
+    --bar-read: #c8d8ec;
+    --bar-unread: #5aa4ef;
+
+    /* Text */
+    --text-primary: #1a2535;
+    --text-secondary: #5a7494;
+    --accent-text: #3a7fcf;
+
+    /* Folder tree selection + unread badge */
+    --folder-selected-bg: #dbeeff;
+    --folder-selected-border: #b8d8f0;
+    --unread-badge-bg: #5aa4ef;
+    --unread-badge-text: #ffffff;
+
+    /* Thunderbird built-in variables */
+    --tree-view-bg: #f0f5fc;
+    --tree-view-color: #1a2535;
+    --sidebar-background: #eaf2fb;
+    --sidebar-background-color: #eaf2fb;
+    --sidebar-color: #1a2535;
+    --sidebar-text-color: #1a2535;
+    --treeitem-background-selected: #dbeeff;
+    --treeitem-background-hover: #e0eef8;
+    --treeitem-background-active: #cce4f7;
+
+    /* ── Icon accent colours ─────────────────────────────────── */
+
+    /* Spaces sidebar nav */
+    --icon-mail: #5aa4ef;
+    --icon-contacts: #7048c8; /* richer purple on light bg */
+    --icon-calendar: #3aaa90;
+    --icon-tasks: #e08800;
+    --icon-chat: #3aaecc;
+    --icon-settings: #7a77a8;
+
+    /* Folder tree */
+    --icon-inbox: #5aa4ef;
+    --icon-drafts: #9a97b8;
+    --icon-sent: #3aaa90;
+    --icon-junk: #df4646;
+    --icon-trash: #8785a3;
+    --icon-archive: #8785a3;
+    --icon-outbox: #5aacb4;
+    --icon-folder: #1c66c8; /* mac deep blue */
+
+    /* Message header toolbar */
+    --icon-reply: #b566bf;
+    --icon-forward: #1e8bcd;
+    --icon-action: #8785a3;
+
+    /* Tab strip */
+    --icon-tab: #525b65;
+
+    /* Utility (filter, list, sync, book) */
+    --icon-utility: #4a5a6a;
+
+    /* Today pane */
+    --today-date-color: #3a7fcf;
+    --today-time-color: #3a7fcf;
+  }
+}
+
+/* ── Dark mode ──────────────────────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  *|*:root {
+    /* Pane backgrounds */
+    --spaces-bg: #141e2b;
+    --spaces-border: #1e2e42;
+    --spaces-hover: #1f2d3f;
+    --spaces-active: #1d3050;
+    --folder-bg: #141e2b;
+    --thread-bg: #0f1923;
+    --body-bg: #0f1923;
+
+    /* Cards */
+    --card-bg: #141e2b;
+    --card-border: #1e2e42;
+    --card-hover-bg: #1a2535;
+    --card-hover-border: #243350;
+    --card-selected-bg: #1a2535;
+    --card-selected-border: #243350;
+    --card-unfocus-bg: #1d3050;
+    --card-unfocus-border: #1e2e42;
+
+    /* Left accent bar on cards */
+    --bar-read: #2a4a6b;
+    --bar-unread: #5aa4ef;
+
+    /* Text */
+    --text-primary: #d8e4f0;
+    --text-secondary: #8fa8c0;
+    --accent-text: #5aa4ef;
+
+    /* Folder tree selection + unread badge */
+    --folder-selected-bg: #1d3050;
+    --folder-selected-border: #1d3050;
+    --unread-badge-bg: #5aa4ef;
+    --unread-badge-text: #ffffff;
+
+    /* Thunderbird built-in variables */
+    --sidebar-background: #141e2b;
+    --sidebar-color: #d8e4f0;
+    --sidebar-background-color: #141e2b;
+    --sidebar-text-color: #d8e4f0;
+    --treeitem-background-selected: #1d3050;
+    --treeitem-background-hover: #1a2a40;
+    --treeitem-background-active: #243d60;
+    --tree-view-bg: #0f1923;
+    --tree-view-color: #d8e4f0;
+    --listbox-selected-bg: #1d3050;
+    --listbox-focused-selected-bg: #243d60;
+    --layout-background-1: #0f1923;
+
+    /* ── Icon accent colours ─────────────────────────────────── */
+
+    /* Spaces sidebar nav */
+    --icon-mail: #5aa4ef;
+    --icon-contacts: #a07ee8;
+    --icon-calendar: #46c0a8;
+    --icon-tasks: #f59e0b;
+    --icon-chat: #5cbfdd;
+    --icon-settings: #9a97b8;
+
+    /* Folder tree */
+    --icon-inbox: #5aa4ef;
+    --icon-drafts: #9a97b8;
+    --icon-sent: #46c0a8;
+    --icon-junk: #df4646;
+    --icon-trash: #8785a3;
+    --icon-archive: #8785a3;
+    --icon-outbox: #6aadb5;
+    --icon-folder: #4b9de0; /* mac blue, lighter for dark bg */
+
+    /* Message header toolbar */
+    --icon-reply: #b566bf;
+    --icon-forward: #1e8bcd;
+    --icon-action: #8785a3;
+
+    /* Tab strip */
+    --icon-tab: #8fa8c0;
+
+    /* Utility (filter, list, sync, book) */
+    --icon-utility: #8fa8c0;
+
+    /* Today pane */
+    --today-date-color: #5aa4ef;
+    --today-time-color: #5aa4ef;
+  }
+}

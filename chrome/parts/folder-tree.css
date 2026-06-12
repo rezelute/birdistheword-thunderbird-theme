@@ -1,0 +1,38 @@
+#folderTree li[data-server-type] > .container > .name {
+  font-weight: normal !important;
+  font-size: 1.18rem !important;
+}
+
+#folderTree li[data-server-type]:not(:first-of-type) > .container {
+  margin-top: 10px !important;
+}
+
+#folderTree li[data-server-type] > .container > .icon {
+  display: none !important;
+}
+
+ul[role="tree"] .container .twisty,
+ol[role="tree"] .container .twisty {
+  margin-left: 6px !important;
+}
+
+.unread > .container > .unread-count {
+  display: unset !important;
+  background-color: var(--unread-badge-bg) !important;
+  color: var(--unread-badge-text) !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  padding: 1px 6px !important;
+  min-width: 18px !important;
+  text-align: center !important;
+}
+
+:is(ul, ol)[role="tree"] li.selected > .container::before {
+  transform: translateX(3px) !important;
+}
+
+:is(ul, ol)[role="tree"] li.selected.current > .container {
+  border-color: var(--folder-selected-border) !important;
+  background-color: var(--folder-selected-bg) !important;
+}

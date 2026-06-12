@@ -1,0 +1,268 @@
+/* Address book is loaded in a <browser type="content"> element - unreachable
+   from userChrome.css. Variables are available because userContent.css imports
+   parts/variables.css before this file. */
+@-moz-document url("about:addressbook") {
+  /* ── Books pane (left panel) ──────────────────────────── */
+
+  #booksPane {
+    background-color: var(--folder-bg) !important;
+    border-right: 1px solid var(--spaces-border) !important;
+  }
+
+  #booksPaneHeaderBar {
+    background-color: var(--spaces-bg) !important;
+    border-bottom: 1px solid var(--spaces-border) !important;
+    color: var(--text-primary) !important;
+  }
+
+  .bookRow-container,
+  .listRow-container {
+    color: var(--text-primary) !important;
+    border-radius: 6px !important;
+    margin: 0 4px !important;
+  }
+
+  .bookRow-container:hover,
+  .listRow-container:hover {
+    background-color: var(--spaces-hover) !important;
+  }
+
+  li.bookRow.selected > .bookRow-container,
+  li.bookRow.current > .bookRow-container,
+  li.listRow.selected > .listRow-container,
+  li.listRow.current > .listRow-container {
+    background-color: var(--folder-selected-bg) !important;
+    color: var(--accent-text) !important;
+  }
+
+  .books-pane-bottom,
+  #cardCount {
+    background-color: var(--folder-bg) !important;
+    color: var(--text-secondary) !important;
+    border-top: 1px solid var(--spaces-border) !important;
+  }
+
+  /* ── Cards pane (contact list) ────────────────────────── */
+
+  #cardsPane {
+    background-color: var(--thread-bg) !important;
+  }
+
+  #cardsPaneHeader {
+    background-color: var(--folder-bg) !important;
+    border-bottom: 1px solid var(--card-border) !important;
+  }
+
+  #cardsPaneHeader input,
+  #cardsPaneHeader .searchBox,
+  #cardsPaneHeader search-bar {
+    background-color: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--card-border) !important;
+  }
+
+  #cards[rows="ab-card-row"],
+  #cards[rows="ab-card-row"] table,
+  #cards[rows="ab-card-row"] [is="tree-view-table-body"] {
+    background-color: var(--thread-bg) !important;
+  }
+
+  #cardsPane tr[is="ab-card-row"],
+  #cardsPane tr[is="ab-card-row"] td {
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  #cardsPane .card-container {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 6px !important;
+    margin: 3px 6px !important;
+    padding: 6px 8px !important;
+    position: relative !important;
+    overflow: hidden !important;
+  }
+
+  #cardsPane .card-container::before {
+    content: "" !important;
+    position: absolute !important;
+    inset-block: 0 !important;
+    inset-inline-start: 0 !important;
+    width: 3px !important;
+    background-color: var(--bar-read) !important;
+  }
+
+  #cardsPane .card-container:hover {
+    background-color: var(--card-hover-bg) !important;
+    border-color: var(--card-hover-border) !important;
+  }
+
+  #cardsPane tr.selected .card-container,
+  #cardsPane tr.current .card-container {
+    background-color: var(--card-selected-bg) !important;
+    border-color: var(--card-selected-border) !important;
+  }
+
+  #cardsPane tr.selected .card-container::before,
+  #cardsPane tr.current .card-container::before {
+    background-color: var(--bar-unread) !important;
+  }
+
+  #cardsPane .ab-card-first-line,
+  #cardsPane .ab-card-first-line span {
+    color: var(--text-primary) !important;
+    font-weight: 500 !important;
+  }
+
+  #cardsPane .ab-card-second-line {
+    color: var(--text-secondary) !important;
+    font-size: 0.88rem !important;
+  }
+
+  #cardsPane .recipient-avatar:not(.is-mail-list) {
+    background-color: var(--unread-badge-bg) !important;
+    color: var(--unread-badge-text) !important;
+  }
+
+  /* ── Details pane (right panel) ───────────────────────── */
+
+  #detailsPane {
+    background-color: var(--body-bg) !important;
+    color: var(--text-primary) !important;
+    border-left: 1px solid var(--card-border) !important;
+  }
+
+  /* Contact header strip: photo + name on tinted background */
+  .contact-header:not([hidden]) {
+    background-color: var(--folder-bg) !important;
+    border-bottom: 1px solid var(--card-border) !important;
+    padding: 20px 21px !important;
+    margin-block-end: 0 !important;
+  }
+
+  /* Circular photo / default avatar - blue bg, white icon stroke */
+  .contact-photo {
+    background-color: var(--unread-badge-bg) !important;
+    stroke: rgba(255, 255, 255, 0.92) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  }
+
+  .contact-heading-name {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+  }
+
+  .contact-heading-nickname {
+    color: var(--text-secondary) !important;
+  }
+
+  .contact-heading-email {
+    color: var(--accent-text) !important;
+  }
+
+  .contact-details-scroll {
+    background-color: var(--body-bg) !important;
+  }
+
+  /* Action buttons bar (Write, Edit, etc.) */
+  #detailsActions {
+    background-color: var(--folder-bg) !important;
+    border-bottom: 1px solid var(--card-border) !important;
+  }
+
+  #detailsActions .button-flat {
+    background-color: transparent !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--card-border) !important;
+  }
+
+  #detailsActions .button-flat:hover {
+    background-color: var(--card-hover-bg) !important;
+    border-color: var(--card-hover-border) !important;
+  }
+
+  #editButton {
+    background-color: var(--card-selected-bg) !important;
+    color: var(--accent-text) !important;
+    border: 1px solid var(--folder-selected-border) !important;
+  }
+
+  #editButton:hover {
+    background-color: var(--card-unfocus-bg) !important;
+  }
+
+  /* Detail field sections */
+  #detailsBody {
+    background-color: var(--body-bg) !important;
+    color: var(--text-primary) !important;
+  }
+
+  #detailsBody section {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 8px !important;
+    padding: 8px 12px !important;
+    margin-bottom: 8px !important;
+  }
+
+  #detailsBody section h2 {
+    color: var(--text-secondary) !important;
+    font-size: 0.78rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.07em !important;
+    border-bottom: 1px solid var(--card-border) !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  #detailsBody .entry-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #detailsBody .entry-item {
+    color: var(--text-primary) !important;
+  }
+
+  #detailsBody .entry-type {
+    color: var(--accent-text) !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+  }
+
+  #detailsBody .entry-value {
+    color: var(--text-primary) !important;
+  }
+
+  #detailsBody .entry-value a,
+  #detailsBody a {
+    color: var(--accent-text) !important;
+  }
+
+  #detailsFooter {
+    background-color: var(--folder-bg) !important;
+    border-top: 1px solid var(--card-border) !important;
+  }
+
+  /* ── Light mode only: drop shadows ────────────────────── */
+
+  @media (prefers-color-scheme: light) {
+    #cardsPane .card-container {
+      box-shadow: 0 1px 3px rgba(0, 30, 80, 0.07) !important;
+    }
+
+    #cardsPane .card-container:hover {
+      box-shadow: 0 2px 5px rgba(0, 30, 80, 0.1) !important;
+    }
+
+    #cardsPane tr.selected .card-container,
+    #cardsPane tr.current .card-container {
+      box-shadow: none !important;
+    }
+
+    #detailsBody section {
+      box-shadow: 0 1px 3px rgba(0, 30, 80, 0.06) !important;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+#today-pane-panel {
+  background-color: var(--folder-bg) !important;
+  border-left: 1px solid var(--spaces-border) !important;
+}
+
+#today-pane-panel .sidebar-header {
+  background-color: var(--spaces-bg) !important;
+  border-bottom: 1px solid var(--spaces-border) !important;
+  color: var(--text-primary) !important;
+}
+
+#today-pane-panel .sidebar-header * {
+  color: var(--text-primary) !important;
+}
+
+#today-pane-panel calendar-event-box,
+#today-pane-panel .calendar-event-details {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  color: var(--text-primary) !important;
+}
+
+#today-pane-panel .agenda-date-header {
+  background-color: var(--thread-bg) !important;
+  color: var(--today-date-color) !important;
+}
+
+li[is="agenda-listitem"] {
+  padding: 2px 6px !important;
+}
+
+.agenda-date-header {
+  color: var(--today-date-color) !important;
+  font-size: 0.85rem !important;
+  padding: 8px 4px 4px !important;
+  letter-spacing: 0.05em !important;
+}
+
+.agenda-listitem-details {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 6px !important;
+  padding: 6px 8px !important;
+  margin-bottom: 4px !important;
+  color: var(--text-primary) !important;
+}
+
+li[is="agenda-listitem"]:hover .agenda-listitem-details {
+  background-color: var(--card-hover-bg) !important;
+  border-color: var(--card-hover-border) !important;
+}
+
+li[is="agenda-listitem"].selected .agenda-listitem-details,
+li[is="agenda-listitem"].current .agenda-listitem-details {
+  background-color: var(--card-selected-bg) !important;
+  border-color: var(--card-selected-border) !important;
+}
+
+.agenda-listitem-time {
+  color: var(--today-time-color) !important;
+  font-size: 0.85rem !important;
+}
+
+.agenda-listitem-title {
+  color: var(--text-primary) !important;
+}

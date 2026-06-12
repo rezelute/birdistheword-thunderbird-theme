@@ -1,0 +1,49 @@
+#tabs-toolbar {
+  background-color: #f9f9f9 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  margin-bottom: 8px !important;
+}
+
+.tabmail-tab {
+  border-radius: 6px !important;
+}
+
+.tabmail-tab[selected="true"] {
+  box-shadow: 0 2px 8px -5px #9c9c9c !important;
+}
+
+.tab-background[selected="true"] {
+  background-color: #ffffff !important;
+}
+
+.tab-line {
+  height: 0px !important;
+}
+
+#tabmail-arrowscrollbox {
+  margin-left: 0px !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  #tabs-toolbar {
+    background-color: #141e2b !important;
+    background-image: none !important;
+  }
+
+  .tab-label {
+    color: #d8e4f0 !important;
+  }
+
+  .tab-label[selected="true"] {
+    color: #ffffff !important;
+  }
+
+  .tabmail-tab[selected="true"] {
+    box-shadow: 0 2px 8px -5px #000 !important;
+  }
+
+  .tab-background[selected="true"] {
+    background-color: #1a2a3e !important;
+  }
+}

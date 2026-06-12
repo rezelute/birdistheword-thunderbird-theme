@@ -1,0 +1,51 @@
+#spacesToolbar {
+  background-color: var(--spaces-bg) !important;
+  background-image: none !important;
+  border-right: 1px solid var(--spaces-border) !important;
+  padding-right: 10px !important;
+}
+
+#messengerBody {
+  overflow: hidden !important;
+  opacity: 1 !important;
+}
+
+.icons-beside-text,
+.icons-only {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+.settings-btn-container #settingsButton,
+.settings-btn-container:hover #settingsButton {
+  color: #fff0 !important;
+}
+
+/* Light mode button states */
+.spaces-toolbar-button:hover:not(.current) {
+  background-color: var(--spaces-hover) !important;
+}
+
+.spaces-toolbar-button.current {
+  background-color: var(--spaces-active) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  #messengerBody {
+    background-color: var(--body-bg) !important;
+  }
+
+  .spaces-toolbar-button {
+    background-color: var(--spaces-bg) !important;
+    color: var(--text-secondary) !important;
+  }
+
+  .spaces-toolbar-button:hover:not(.current) {
+    background-color: var(--spaces-hover) !important;
+    color: var(--text-primary) !important;
+  }
+
+  .spaces-toolbar-button.current {
+    background-color: var(--spaces-active) !important;
+    color: var(--accent-text) !important;
+  }
+}

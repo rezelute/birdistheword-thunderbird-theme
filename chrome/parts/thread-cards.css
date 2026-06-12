@@ -1,0 +1,207 @@
+.list-header-title {
+  margin-left: 10px !important;
+}
+
+.sender {
+  font-size: 1.15rem !important;
+  font-weight: 500 !important;
+  margin-top: 8px !important;
+}
+
+button .replies-icon {
+  display: none !important;
+}
+
+button .thread-replies {
+  display: none;
+}
+
+tr.children
+  .thread-card-button:has(.thread-replies[data-l10n-id])
+  ~ .thread-card-subject-container
+  .subject {
+  margin-left: 15px !important;
+}
+
+.thread-card-dynamic-row > .thread-card-button {
+  align-self: end !important;
+}
+
+.thread-card-dynamic-row {
+  gap: 0px !important;
+  row-gap: 0px !important;
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.thread-card-subject-container {
+  color: var(--text-secondary);
+  font-size: 0.96rem !important;
+  width: 85%;
+}
+
+tree-view[data-show-grouped-by-sort="true"] .card-layout.children {
+  height: 30px !important;
+}
+
+tree-view[data-show-grouped-by-sort="true"] .card-layout.children *,
+tree-view[data-show-grouped-by-sort="true"] .card-layout.children:hover,
+tree-view[data-show-grouped-by-sort="true"] .card-layout.children *:hover {
+  background: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+  color: inherit !important;
+  filter: none !important;
+  outline: none !important;
+  text-decoration: none !important;
+  transition: none !important;
+}
+
+.button.button-flat.button-reset.twisty.thread-card-button {
+  margin-top: -38px !important;
+}
+
+.thread-card-icon-info {
+  margin-top: -15px;
+}
+
+& .card-container .sender {
+  padding-inline-start: 3px !important;
+}
+
+#threadTree[rows="thread-card"] .card-layout td .card-container::before {
+  inset-inline-start: calc(
+    var(--indicator-width) * 2 - var(--indicator-gap)
+  ) !important;
+}
+
+/* Kill row highlight behind the card */
+[is="tree-view-table-body"] tr.selected.current {
+  background-color: transparent !important;
+}
+
+tr.table-layout.selected.current {
+  color: var(--accent-text) !important;
+}
+
+tr.card-layout.children span.subject {
+  font-size: 0.95em !important;
+}
+
+.sort-header-details {
+  display: none !important;
+}
+
+tr.card-layout[style*="height: 49px"] .sender,
+tr.card-layout[style*="height: 50px"] .sender {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  margin-top: 5px !important;
+}
+
+#threadTree[rows="thread-card"] .card-layout td .card-container .read-status {
+  content: var(--read-status-icon) !important;
+  height: var(--read-status-size) !important;
+  width: var(--read-status-size) !important;
+  fill: #4ade8000 !important;
+  stroke: #16a34a00 !important;
+  margin-left: 0 !important;
+}
+
+#cards[rows="ab-card-row"] {
+  border-top: 0px solid var(--splitter-color) !important;
+}
+
+/* ── Base card (both modes via variables) ─────────────────── */
+
+.card-container {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 6px !important;
+  margin: 2px 4px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+tr[is="thread-card"] .card-container {
+  margin-block: 3px !important;
+}
+
+.card-layout:hover .card-container {
+  background-color: var(--card-hover-bg) !important;
+  border-color: var(--card-hover-border) !important;
+}
+
+/* Left accent bar */
+.card-container::before {
+  content: "" !important;
+  position: absolute !important;
+  inset-block: 0 !important;
+  inset-inline-start: 0 !important;
+  width: 5px !important;
+  background-color: var(--bar-read) !important;
+}
+
+tr.unread .card-container::before {
+  background-color: var(--bar-unread) !important;
+}
+
+tr.selected .card-container::before,
+tr.current .card-container::before {
+  background-color: var(--bar-unread) !important;
+}
+
+/* Selected card - focused */
+[is="tree-view-table-body"] .card-layout.selected.current .card-container {
+  background-color: var(--card-selected-bg) !important;
+  border: 1px solid var(--card-selected-border) !important;
+}
+
+/* Selected card - unfocused or junk */
+#threadTree[rows="thread-card"]:not(:focus, :focus-within)
+  .card-layout.selected.current
+  .card-container,
+#threadTree[rows="thread-card"]:not(:focus, :focus-within)
+  .card-layout[data-properties~="junk"].selected.current
+  .card-container {
+  background-color: var(--card-unfocus-bg) !important;
+  border: 1px solid var(--card-unfocus-border) !important;
+}
+
+&.selected.current {
+  --tree-card-background: var(--card-selected-bg);
+}
+
+/* ── Light mode extras ────────────────────────────────────── */
+
+@media (prefers-color-scheme: light) {
+  .card-container {
+    box-shadow: 0 1px 3px rgba(0, 30, 80, 0.08) !important;
+  }
+
+  .card-layout:hover .card-container {
+    box-shadow: 0 2px 5px rgba(0, 30, 80, 0.12) !important;
+  }
+
+  [is="tree-view-table-body"] .card-layout.selected.current .card-container {
+    box-shadow: none !important;
+  }
+
+  #threadTree[rows="thread-card"]:not(:focus, :focus-within)
+    .card-layout.selected.current
+    .card-container,
+  #threadTree[rows="thread-card"]:not(:focus, :focus-within)
+    .card-layout[data-properties~="junk"].selected.current
+    .card-container {
+    box-shadow: none !important;
+  }
+}
+
+/* ── Dark mode extras ─────────────────────────────────────── */
+
+@media (prefers-color-scheme: dark) {
+  .card-layout.unread .card-container {
+    border-left: 3px solid var(--bar-unread) !important;
+  }
+}

@@ -1,0 +1,36 @@
+.infobar.animated {
+  width: 98% !important;
+  margin: auto !important;
+  --message-bar-background-color: #e6f2fa !important;
+  margin-bottom: 10px !important;
+}
+
+.notification-button.small-button.footer-button.button-menu-list {
+  background-color: #fff0 !important;
+  padding: 3px !important;
+  padding-right: 20px !important;
+  padding-left: 10px !important;
+  border: none !important;
+}
+
+.notification-button.small-button.footer-button.button-menu-list .button-text {
+  margin-bottom: 3px !important;
+  margin-right: 1px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .infobar.animated {
+    --message-bar-background-color: #0e2236 !important;
+    border: 1px solid #1d4060 !important;
+  }
+
+  .notification-button .button-text,
+  .notification-button .button-icon {
+    color: #d8e4f0 !important;
+    fill: #d8e4f0 !important;
+  }
+
+  .notification-button.button-menu-list {
+    stroke: #d8e4f0 !important;
+  }
+}

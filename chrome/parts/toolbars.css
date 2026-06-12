@@ -1,0 +1,64 @@
+.toolbarbutton-1 {
+  background-color: #fff !important;
+}
+
+.toolbarbutton-1:hover {
+  background-color: #f1f0f0 !important;
+}
+
+.toolbarbutton-1 .toolbarbutton-icon {
+  box-sizing: border-box !important;
+  width: 18px !important;
+  height: 18px !important;
+  color: #005f99 !important;
+}
+
+.toolbarbutton-icon {
+  margin-left: 5px;
+  margin-right: -5px;
+}
+
+.toolbarbutton-menu-dropmarker {
+  margin-right: 5px;
+}
+
+#threadPaneHeaderBar {
+  border-bottom: 0px !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  #threadPaneHeaderBar,
+  #threadPaneHeader {
+    background-color: #141e2b !important;
+    border-bottom: 1px solid #1e2e42 !important;
+  }
+
+  #threadPaneHeaderBar *,
+  #threadPaneHeader * {
+    color: #d8e4f0 !important;
+  }
+
+  .toolbarbutton-1 {
+    background-color: #1a2535 !important;
+  }
+
+  .toolbarbutton-1:hover {
+    background-color: #1f2d3f !important;
+  }
+
+  unified-toolbar,
+  #unifiedToolbarContainer {
+    background-color: #1a2535 !important;
+    border-bottom: 1px solid #1e2e42 !important;
+  }
+
+  global-search-bar {
+    background-color: #0f1923 !important;
+    border-color: #243350 !important;
+    color: #d8e4f0 !important;
+  }
+
+  global-search-bar:focus-within {
+    border-color: #5aa4ef !important;
+  }
+}
